@@ -7,12 +7,19 @@
 //
 
 import Cocoa
+import SwiftEditorView
 
 class ViewController: NSViewController {
+    
+    let lexer = SwiftLexer()
 
+    
+    @IBOutlet weak var codeView: SyntaxTextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        codeView.theme = DefaultSourceCodeTheme()
+        codeView.delegate = self as SyntaxTextViewDelegate
         // Do any additional setup after loading the view.
     }
 
@@ -25,3 +32,20 @@ class ViewController: NSViewController {
 
 }
 
+extension ViewController: SyntaxTextViewDelegate {
+    
+    func didChangeText(_ syntaxTextView: SyntaxTextView) {
+        
+        
+    }
+    
+    func didChangeSelectedRange(_ syntaxTextView: SyntaxTextView, selectedRange: NSRange) {
+        
+        
+    }
+    
+    func lexerForSource(_ source: String) -> Lexer {
+        return lexer
+    }
+    
+}

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D76060A235FBD1700F7629D /* SwiftEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6D760609235FBD1700F7629D /* SwiftEditorView */; };
 		6D91DC50235FB8DB00B13771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D91DC4F235FB8DB00B13771 /* AppDelegate.swift */; };
 		6D91DC52235FB8DB00B13771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D91DC51235FB8DB00B13771 /* ViewController.swift */; };
 		6D91DC55235FB8DB00B13771 /* SwiftyAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D91DC53235FB8DB00B13771 /* SwiftyAPI.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D76060A235FBD1700F7629D /* SwiftEditorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = SwiftyAPI;
+			packageProductDependencies = (
+				6D760609235FBD1700F7629D /* SwiftEditorView */,
+			);
 			productName = SwiftyAPI;
 			productReference = 6D91DC4C235FB8DB00B13771 /* SwiftyAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 6D91DC43235FB8DA00B13771;
+			packageReferences = (
+				6D760608235FBD1700F7629D /* XCRemoteSwiftPackageReference "SwiftEditorView" */,
+			);
 			productRefGroup = 6D91DC4D235FB8DB00B13771 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6D760608235FBD1700F7629D /* XCRemoteSwiftPackageReference "SwiftEditorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DonsWayo/SwiftEditorView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6D760609235FBD1700F7629D /* SwiftEditorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D760608235FBD1700F7629D /* XCRemoteSwiftPackageReference "SwiftEditorView" */;
+			productName = SwiftEditorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6D91DC53235FB8DB00B13771 /* SwiftyAPI.xcdatamodeld */ = {
